@@ -21,8 +21,7 @@ A hybrid image processing and machine learning system that classifies the **10 t
 4. [Installation](#installation)
 5. [Outputs and Results](#outputs-and-results)
 6. [Repository Structure](#repository-structure)
-7. [Notes and Limitations](#notes-and-limitations)
-8. [Citation and License](#citation-and-license)
+
 
 ---
 
@@ -243,16 +242,4 @@ For samples that are "healthy" but misclassified, errors shift mainly toward the
 
 ---
 
-## Notes and Limitations
 
-- **Data augmentation was performed before splitting:** Because the augmented images generated for under-represented classes were added to the dataset before the cross-validation / hold-out split, derivatives of the same source image may appear on both the training and test sides. This may make the reported performance optimistic; for a stricter evaluation, it is recommended to split first and apply augmentation only to the training set.
-- PlantVillage images were captured in a controlled environment with plain backgrounds; performance may drop under real field conditions.
-- The notebook uses random seeds (`seed=42`); however, results may differ slightly due to parallel feature extraction and library versions.
-
----
-
-## Citation and License
-
-- Dataset: Hughes, D. P. & Salathé, M. (2015). *An open access repository of images on plant health to enable the development of mobile disease diagnostics.* PlantVillage.
-- Work: Cem Er, Bandırma Onyedi Eylül University, Computer Engineering — *Morphology-Guided Spectral Masking and Multi-Stream Feature Fusion Architecture for Tomato Leaf Disease Detection.*
-- License: Don't forget to add a license file (e.g., MIT) to the repository; the PlantVillage dataset is subject to its own license terms.
